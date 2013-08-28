@@ -8,6 +8,9 @@ var async   = require('async')
   , db      = require('./models');
 
 var app = express();
+/* nardus*/
+app.use("/static",express.static(__dirname+"/static"));
+/* end nardus*/
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
